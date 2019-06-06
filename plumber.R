@@ -1,5 +1,5 @@
 #* Echo back the input
-#* @param msg The message to echo
+#* @param path path of the csv file in disk location
 #* @get /read
 #* @serializer unboxedJSON
 function(path){
@@ -9,9 +9,9 @@ function(path){
 
 
 #* subset data back the input
-#* @param col1 The message to col1
-#* @param col2 The message to col2
-#* @param path The message to path
+#* @param col1 one column of the csv file
+#* @param col2 one column of the csv file
+#* @param path path path of the csv file in disk location
 #* @get /subset
 function(path,col1,col2){
   df<-readr::read_csv(path) %>% 
