@@ -2,8 +2,8 @@
 #* @param msg The message to echo
 #* @get /read
 #* @serializer unboxedJSON
-function(msg){
-  df<-readr::read_csv(msg)
+function(path){
+  df<-readr::read_csv(path)
   list(names(df))
 }
 
